@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "c1fda655-7ad3-4ecb-816f-8e0428f1e09c",
+		"name": "Calendar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MeetingRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTime\":2,\n    \"endTime\":3,\n    \"location\":\"Delhi\",\n    \"owner\":\"Abhi\",\n    \"userList\":[\n        {\n            \"id\":\"User1\",\n            \"name\" : \"Abhishek\",\n            \"email\" : \"abcd@gmail.com\"\n        }\n    ],\n    \"title\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/calendar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminMeetingRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTime\":2,\n    \"endTime\":3,\n    \"location\":\"Delhi\",\n    \"owner\":\"Abhi\",\n    \"userList\":[\n        {\n            \"id\":\"User1\",\n            \"name\" : \"Abhishek\",\n            \"email\" : \"abcd@gmail.com\"\n        }\n    ],\n    \"title\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/calendar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMeetingRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startTime\":2,\n    \"endTime\":3,\n    \"location\":\"Delhi\",\n    \"owner\":\"Abhi444\",\n    \"userList\":[\n        {\n            \"id\":\"User1\",\n            \"name\" : \"Abhishek\",\n            \"email\" : \"abcd@gmail.com\"\n        }\n    ],\n    \"title\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/calendar/Delhi1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calendar",
+						"Delhi1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMeetingDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MeetingResponse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userResponse\":\"ACCEPTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/calendar/meetingResponse?meetingId=0&userId=User1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calendar",
+						"meetingResponse"
+					],
+					"query": [
+						{
+							"key": "meetingId",
+							"value": "0"
+						},
+						{
+							"key": "userId",
+							"value": "User1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMeeting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AvailableRooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
